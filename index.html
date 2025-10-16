@@ -1,0 +1,967 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://localhost:8501/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg xmlns=&#39;http://www.w3.org/2000/svg&#39; viewBox=&#39;0 0 100 100&#39;&gt;&lt;text y=&#39;.9em&#39; font-size=&#39;90&#39;&gt;%F0%9F%A6%81&lt;/text&gt;&lt;/svg&gt;">
+    <link rel="preload" href="http://localhost:8501/static/media/SourceSansVF-Upright.ttf.BsWL4Kly.woff2" as="font" type="font/woff2" crossorigin="">
+
+    <title>浦育图像识别 - 动物分类系统</title>
+
+    <!-- initialize window.prerenderReady to false and then set to true in React app when app is ready for indexing -->
+    <script>
+      window.prerenderReady = false
+    </script>
+    <script type="module" crossorigin="" src="./index_files/index.6xX1278W.js.下载"></script>
+    <link rel="stylesheet" crossorigin="" href="./index_files/index.CIiu7Ygf.css">
+  <style media=""></style><style data-emotion="st-emotion-cache-global" data-s=""></style><style data-emotion="st-emotion-cache" data-s=""></style><link rel="modulepreload" as="script" crossorigin="" href="http://localhost:8501/static/js/index.64ejlaaT.js"><link rel="modulepreload" as="script" crossorigin="" href="http://localhost:8501/static/js/useBasicWidgetState.CedkNjUW.js"><link rel="modulepreload" as="script" crossorigin="" href="http://localhost:8501/static/js/FormClearHelper.DTcdrasw.js"><link rel="modulepreload" as="script" crossorigin="" href="http://localhost:8501/static/js/index.DH71Ezyj.js"><link rel="modulepreload" as="script" crossorigin="" href="http://localhost:8501/static/js/FileHelper.CaIUKG91.js"><link rel="modulepreload" as="script" crossorigin="" href="http://localhost:8501/static/js/UploadFileInfo.C-jY39rj.js"><link rel="modulepreload" as="script" crossorigin="" href="http://localhost:8501/static/js/ProgressBar.DetlP5aY.js"><link rel="modulepreload" as="script" crossorigin="" href="http://localhost:8501/static/js/Hooks.BRba_Own.js"><link rel="modulepreload" as="script" crossorigin="" href="http://localhost:8501/static/js/index.C9BdUqTi.js"><link rel="modulepreload" as="script" crossorigin="" href="http://localhost:8501/static/js/uniqueId.RI1LJdtz.js"><link rel="modulepreload" as="script" crossorigin="" href="http://localhost:8501/static/js/InputInstructions.xnSDuYeQ.js"><link rel="modulepreload" as="script" crossorigin="" href="http://localhost:8501/static/js/useUpdateUiValue.DeXelfRH.js"><link rel="modulepreload" as="script" crossorigin="" href="http://localhost:8501/static/js/inputUtils.CptNuJwn.js"><link rel="modulepreload" as="script" crossorigin="" href="http://localhost:8501/static/js/input.s6pjQ49A.js"><link rel="modulepreload" as="script" crossorigin="" href="http://localhost:8501/static/js/base-input.BQft14La.js"><link rel="modulepreload" as="script" crossorigin="" href="http://localhost:8501/static/js/index.Bxz2yX3P.js"><link rel="modulepreload" as="script" crossorigin="" href="http://localhost:8501/static/js/useTextInputAutoExpand.Ca7w8dVs.js"></head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"><div class=""><div class="withScreencast" data-testid="stScreencast"><div class="stApp stAppEmbeddingId-t47qoujd6tnl streamlit-wide st-emotion-cache-1r4qj8v ee4bbma0" data-testid="stApp" data-test-script-state="notRunning" data-test-connection-state="CONNECTED"><div class="stAppViewContainer appview-container st-emotion-cache-1yiq2ps e4man110" data-testid="stAppViewContainer" data-layout="wide"><section class="stSidebar st-emotion-cache-1x0no5y e6f82ta0" data-testid="stSidebar" aria-expanded="false" style="position: relative; user-select: auto; width: 256px; height: auto; box-sizing: border-box; flex-shrink: 0;"><div data-testid="stSidebarContent" class="st-emotion-cache-1ybqi87 e6f82ta2"><div data-testid="stSidebarHeader" class="st-emotion-cache-10p9htt e6f82ta4"><div data-testid="stLogoSpacer" class="st-emotion-cache-11ukie e6f82ta7"></div><div data-testid="stSidebarCollapseButton" class="st-emotion-cache-qmp9ai e6f82ta8"><button kind="headerNoPadding" data-testid="stBaseButton-headerNoPadding" aria-label="" class="st-emotion-cache-1aplgmp e8vg11g15"><span color="rgba(49, 51, 63, 0.6)" class="st-emotion-cache-189uypx e1t4gh342"><span color="rgba(49, 51, 63, 0.6)" data-testid="stIconMaterial" translate="no" class="st-emotion-cache-pd6qx2 ejhh0er0">keyboard_double_arrow_left</span></span></button></div></div><div data-testid="stSidebarUserContent" class="st-emotion-cache-1r1cntt e6f82ta1"><div class="st-emotion-cache-8atqhb e4man115"><div direction="column" height="auto" class="stVerticalBlock st-emotion-cache-tn0cau e196pkbe2" data-testid="stVerticalBlock"><div class="stElementContainer element-container st-emotion-cache-1vo6xi6 e196pkbe0" data-testid="stElementContainer" data-stale="false" width="100%" height="auto" overflow="visible"><div class="stHeading" data-testid="stHeading"><div data-testid="stMarkdownContainer" class="st-emotion-cache-1fwbbrh et2rgd20"><h2>🧠 AI学习原理</h2></div></div></div><div class="stElementContainer element-container st-emotion-cache-1vo6xi6 e196pkbe0" data-testid="stElementContainer" data-stale="false" width="100%" height="auto" overflow="visible"><div class="stMarkdown" data-testid="stMarkdown"><div data-testid="stMarkdownContainer" class="st-emotion-cache-1fwbbrh et2rgd20"><h3>CNN工作原理</h3>
+<ol>
+<li><strong>卷积层</strong> - 提取图片特征</li>
+<li><strong>池化层</strong> - 缩小特征图</li>
+<li><strong>全连接层</strong> - 做出分类判断</li>
+</ol>
+<h3>数据三要素</h3>
+<ul>
+<li><strong>数量</strong>：越多越好</li>
+<li><strong>质量</strong>：清晰准确</li>
+<li><strong>多样性</strong>：各种情况都要有</li>
+</ul>
+<h3>学习过程</h3>
+<ul>
+<li>收集数据 → 训练模型 → 测试效果</li>
+<li>不断改进，越来越准</li>
+</ul></div></div></div><div class="stElementContainer element-container st-emotion-cache-1vo6xi6 e196pkbe0" data-testid="stElementContainer" data-stale="false" width="100%" height="auto" overflow="visible"><div class="stMarkdown" data-testid="stMarkdown"><div data-testid="stMarkdownContainer" class="st-emotion-cache-1fwbbrh et2rgd20"><hr></div></div></div><div class="stElementContainer element-container st-emotion-cache-1vo6xi6 e196pkbe0" data-testid="stElementContainer" data-stale="false" width="100%" height="auto" overflow="visible"><div class="stMarkdown" data-testid="stMarkdown"><div data-testid="stCaptionContainer" class="st-emotion-cache-lcte13 et2rgd20"><p>浦育图像识别系统 v1.0 | 机器学习教学平台</p></div></div></div></div></div></div></div><div><div style="position: absolute; user-select: none; width: 8px; height: 100%; top: 0px; cursor: col-resize; right: -6px;"><div class="st-emotion-cache-m0hag0 e6f82ta3"></div></div></div></section><div class="st-emotion-cache-6px8kg e4man1110"><header class="stAppHeader st-emotion-cache-1ffuo7c e3g0k5y1" data-testid="stHeader"><div class="stAppToolbar st-emotion-cache-14vh5up e3g0k5y2" data-testid="stToolbar"><div class="st-emotion-cache-1j22a0y e3g0k5y4"><div class="st-emotion-cache-70qvj9 e3g0k5y5"><div class="st-emotion-cache-8ezv7j e3g0k5y3"><button kind="headerNoPadding" data-testid="stExpandSidebarButton" aria-label="" class="st-emotion-cache-1aplgmp e8vg11g15"><span color="rgba(49, 51, 63, 0.6)" class="st-emotion-cache-189uypx e1t4gh342"><span color="rgba(49, 51, 63, 0.6)" data-testid="stIconMaterial" translate="no" class="st-emotion-cache-pd6qx2 ejhh0er0">keyboard_double_arrow_right</span></span></button></div></div><div class="st-emotion-cache-scp8yw e3g0k5y6"><div class="stToolbarActions st-emotion-cache-1p1m4ay ekuhni82" data-testid="stToolbarActions"></div><div class="stAppDeployButton" data-testid="stAppDeployButton"><button kind="header" data-testid="stBaseButton-header" aria-label="" class="st-emotion-cache-egm30d e8vg11g14"><div class="st-emotion-cache-1wbqy5l e17qgqm80"><span>Deploy</span></div></button></div><span id="MainMenu" class="stMainMenu st-emotion-cache-czk5ss eonxpjd8" data-testid="stMainMenu" aria-haspopup="true" aria-expanded="false"><button kind="headerNoPadding" data-testid="stBaseButton-headerNoPadding" aria-label="" class="st-emotion-cache-1aplgmp e8vg11g15"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="e1t4gh341 st-emotion-cache-1pbsqtx ex0cdmw0"><path fill="none" d="M0 0h24v24H0V0z"></path><path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"></path></svg></button></span></div></div></div></header><section tabindex="0" class="stMain st-emotion-cache-4rsbii e4man111" data-testid="stMain"><div class="stMainBlockContainer block-container st-emotion-cache-zy6yx3 e4man114" data-testid="stMainBlockContainer"><div direction="column" height="auto" class="stVerticalBlock st-emotion-cache-tn0cau e196pkbe2" data-testid="stVerticalBlock"><div class="stElementContainer element-container st-emotion-cache-1vo6xi6 e196pkbe0" data-testid="stElementContainer" data-stale="false" width="100%" height="auto" overflow="visible"><div class="stHeading" data-testid="stHeading"><div data-testid="stMarkdownContainer" class="st-emotion-cache-3uj0rx et2rgd20"><div data-testid="stHeadingWithActionElements" class="st-emotion-cache-ua1rfn et2rgd22"><h1 id="aeea5d31">🦁 浦育图像识别系统<span data-testid="stHeaderActionElements" class="st-emotion-cache-gi0tri et2rgd23"><a href="http://localhost:8501/#aeea5d31" class="st-emotion-cache-yinll1 et2rgd21"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></span></h1></div></div></div></div><div class="stElementContainer element-container st-emotion-cache-1vo6xi6 e196pkbe0" data-testid="stElementContainer" data-stale="false" width="100%" height="auto" overflow="visible"><div class="stMarkdown" data-testid="stMarkdown"><div data-testid="stMarkdownContainer" class="st-emotion-cache-3uj0rx et2rgd20"><p>欢迎来到AI动物识别实验室！在这里你将学习如何训练AI识别不同动物和个体。</p></div></div></div><div class="stElementContainer element-container st-emotion-cache-1vo6xi6 e196pkbe0" data-testid="stElementContainer" data-stale="false" width="100%" height="auto" overflow="visible"><div class="stMarkdown" data-testid="stMarkdown"><div data-testid="stMarkdownContainer" class="st-emotion-cache-3uj0rx et2rgd20"><hr></div></div></div><div class="stTabs st-emotion-cache-8atqhb e1mp0uwq0" data-testid="stTabs" width="100%"><div class="st-ae"><div class=""><div data-baseweb="tab-list" role="tablist" aria-orientation="horizontal" class="st-af st-ag st-ah st-ai st-aj st-ak st-al st-am st-an st-ao st-ap st-aq st-ar"><button data-baseweb="tab" id="tabs-bui2-tab-0" role="tab" aria-selected="true" aria-controls="tabs-bui2-tabpanel-0" tabindex="0" type="button" data-testid="stTab" class="st-as st-at st-au st-av st-aw st-ax st-ay st-az st-b0 st-b1 st-b2 st-b3 st-b4 st-b5 st-b6 st-b7 st-b8 st-b9 st-ba st-bb st-bc st-bd st-be st-bf st-bg st-bh st-bi st-bj st-bk st-bl st-bm st-bn st-bo st-bp st-bq st-br st-bs st-bt st-bu st-bv st-bw st-bx st-by st-bz st-c0"><div data-testid="stMarkdownContainer" class="st-emotion-cache-3qzj0x et2rgd20"><p>📸 数据收集</p></div></button><button data-baseweb="tab" id="tabs-bui2-tab-1" role="tab" aria-selected="false" aria-controls="tabs-bui2-tabpanel-1" tabindex="-1" type="button" data-testid="stTab" class="st-as st-at st-au st-av st-aw st-ax st-ay st-az st-b0 st-b1 st-b2 st-b3 st-b4 st-b5 st-b6 st-b7 st-b8 st-b9 st-ba st-bb st-bc st-c1 st-be st-bf st-bg st-bh st-bi st-bj st-bk st-bl st-bm st-bn st-bo st-bp st-bq st-br st-bs st-bt st-bu st-bv st-bw st-bx st-by st-bz st-c0"><div data-testid="stMarkdownContainer" class="st-emotion-cache-3qzj0x et2rgd20"><p>🤖 模型训练</p></div></button><button data-baseweb="tab" id="tabs-bui2-tab-2" role="tab" aria-selected="false" aria-controls="tabs-bui2-tabpanel-2" tabindex="-1" type="button" data-testid="stTab" class="st-as st-at st-au st-av st-aw st-ax st-ay st-az st-b0 st-b1 st-b2 st-b3 st-b4 st-b5 st-b6 st-b7 st-b8 st-b9 st-ba st-bb st-bc st-c1 st-be st-bf st-bg st-bh st-bi st-bj st-bk st-bl st-bm st-bn st-bo st-bp st-bq st-br st-bs st-bt st-bu st-bv st-bw st-bx st-by st-bz st-c0"><div data-testid="stMarkdownContainer" class="st-emotion-cache-3qzj0x et2rgd20"><p>🔍 模型测试</p></div></button><button data-baseweb="tab" id="tabs-bui2-tab-3" role="tab" aria-selected="false" aria-controls="tabs-bui2-tabpanel-3" tabindex="-1" type="button" data-testid="stTab" class="st-as st-at st-au st-av st-aw st-ax st-ay st-az st-b0 st-b1 st-b2 st-b3 st-b4 st-b5 st-b6 st-b7 st-b8 st-b9 st-ba st-bb st-bc st-c1 st-be st-bf st-bg st-bh st-bi st-bj st-bk st-bl st-bm st-bn st-bo st-bp st-bq st-br st-bs st-bt st-bu st-bv st-bw st-bx st-by st-bz st-c0"><div data-testid="stMarkdownContainer" class="st-emotion-cache-3qzj0x et2rgd20"><p>📊 学习总结</p></div></button><div data-baseweb="tab-highlight" aria-hidden="true" role="presentation" class="st-c2 st-c3 st-c4 st-c5 st-c6 st-c7 st-cz st-c9 st-cr st-fo st-fp"></div></div></div><div data-baseweb="tab-border" aria-hidden="true" role="presentation" class="st-ca st-af st-c7"></div><div data-baseweb="tab-panel" role="tabpanel" id="tabs-bui2-tabpanel-0" aria-labelledby="tabs-bui2-tab-0" class="st-ai st-bi st-cb st-b3 st-b4 st-b1"><div direction="column" height="auto" class="stVerticalBlock st-emotion-cache-tn0cau e196pkbe2" data-testid="stVerticalBlock"><div class="stElementContainer element-container st-emotion-cache-1vo6xi6 e196pkbe0" data-testid="stElementContainer" data-stale="false" width="100%" height="auto" overflow="visible"><div class="stHeading" data-testid="stHeading"><div data-testid="stMarkdownContainer" class="st-emotion-cache-3uj0rx et2rgd20"><div data-testid="stHeadingWithActionElements" class="st-emotion-cache-ua1rfn et2rgd22"><h2 id="2de35135">📸 第一步：收集训练数据<span data-testid="stHeaderActionElements" class="st-emotion-cache-gi0tri et2rgd23"><a href="http://localhost:8501/#2de35135" class="st-emotion-cache-yinll1 et2rgd21"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></span></h2></div></div></div></div><div class="stElementContainer element-container st-emotion-cache-1vo6xi6 e196pkbe0" data-testid="stElementContainer" data-stale="false" width="100%" height="auto" overflow="visible"><div class="stMarkdown" data-testid="stMarkdown"><div data-testid="stMarkdownContainer" class="st-emotion-cache-3uj0rx et2rgd20"><p>AI就像学生一样，需要通过学习资料（数据）来学习。让我们先为AI准备学习资料！</p></div></div></div><div data-testid="stLayoutWrapper" width="100%" height="auto" overflow="visible" class="st-emotion-cache-18kf3ut e196pkbe3"><div direction="row" overflow="visible" height="auto" class="stHorizontalBlock st-emotion-cache-1permvm e196pkbe2" data-testid="stHorizontalBlock" data-test-scroll-behavior="normal"><div class="stColumn st-emotion-cache-kmufyr e196pkbe1" data-testid="stColumn"><div direction="column" height="100%" class="stVerticalBlock st-emotion-cache-wfksaw e196pkbe2" data-testid="stVerticalBlock"><div class="stElementContainer element-container st-emotion-cache-1vo6xi6 e196pkbe0" data-testid="stElementContainer" data-stale="false" width="100%" height="auto" overflow="visible"><div class="stHeading" data-testid="stHeading"><div data-testid="stMarkdownContainer" class="st-emotion-cache-3uj0rx et2rgd20"><div data-testid="stHeadingWithActionElements" class="st-emotion-cache-ua1rfn et2rgd22"><h3 id="d342b4c7">🐯 物种分类数据收集<span data-testid="stHeaderActionElements" class="st-emotion-cache-gi0tri et2rgd23"><a href="http://localhost:8501/#d342b4c7" class="st-emotion-cache-yinll1 et2rgd21"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></span></h3></div></div></div></div><div class="stElementContainer element-container st-emotion-cache-1vo6xi6 e196pkbe0" data-testid="stElementContainer" data-stale="false" width="100%" height="auto" overflow="visible"><div class="stMarkdown" data-testid="stMarkdown"><div data-testid="stMarkdownContainer" class="st-emotion-cache-3uj0rx et2rgd20"><p>收集不同物种的图片：老虎、企鹅、熊猫等</p></div></div></div><div class="stElementContainer element-container st-emotion-cache-1vo6xi6 e196pkbe0" data-testid="stElementContainer" data-stale="false" width="100%" height="auto" overflow="visible"><div class="stSelectbox" data-testid="stSelectbox"><label data-testid="stWidgetLabel" aria-hidden="true" class="st-emotion-cache-1s2v671 e1gk92lc0"><div data-testid="stMarkdownContainer" class="st-emotion-cache-3qzj0x et2rgd20"><p>选择物种类型</p></div></label><div data-baseweb="select" class="st-bp st-cc st-cd st-d1 st-bt st-bu st-ay st-af st-cv"><div class="st-cl st-co st-cm st-cn st-ay st-d2 st-cv st-ag st-ct st-d3 st-d4 st-d5 st-d6 st-d7 st-d8 st-d9 st-da st-db st-dc st-bg st-dd st-c1 st-de st-df st-dg st-dh st-di st-bw"><div class="st-ay st-af st-ai st-dj st-dk st-ag st-b0 st-ah st-d2 st-dl st-dm st-dn st-do"><div value="熊猫" class="st-dp st-ay st-au st-dq st-dr st-d2 st-ds st-bx st-dt">熊猫</div><div class="st-af st-du st-dr st-dv st-b9 st-ba st-bb st-bc st-cp st-ay st-bi st-aw st-ax st-dw st-av st-b2 st-b4 st-b1 st-b3 st-cg st-dx"><input aria-autocomplete="list" aria-expanded="false" aria-haspopup="listbox" aria-label="Selected 熊猫. 选择物种类型" role="combobox" tabindex="0" class="st-bp st-cc st-br st-d1 st-bt st-bu st-c1 st-dy st-ei st-dr st-be st-b9 st-ba st-bb st-bc st-cp st-du st-bi st-aw st-ax st-au st-av st-b2 st-b4 st-b1 st-b3" value="" aria-activedescendant="bui10val-2"><div class="st-bp st-cc st-br st-d1 st-bt st-bu st-c3 st-e0 st-e1 st-e2 st-e3 st-e4 st-e5"></div></div></div><div class="st-ay st-af st-ag st-e6 st-b0 st-e7 st-do"><svg data-baseweb="icon" title="open" viewBox="0 0 24 24" class="st-du st-e8 st-c1 st-e9 st-ea" style="cursor: pointer;"><title>open</title><path transform="rotate(270, 12, 12)" fill-rule="evenodd" clip-rule="evenodd" d="M9 12C9 12.2652 9.10536 12.5196 9.29289 12.7071L13.2929 16.7071C13.6834 17.0976 14.3166 17.0976 14.7071 16.7071C15.0976 16.3166 15.0976 15.6834 14.7071 15.2929L11.4142 12L14.7071 8.70711C15.0976 8.31658 15.0976 7.68342 14.7071 7.29289C14.3166 6.90237 13.6834 6.90237 13.2929 7.29289L9.29289 11.2929C9.10536 11.4804 9 11.7348 9 12Z"></path></svg></div></div></div></div></div><div class="stElementContainer element-container st-key-species_upload st-emotion-cache-1vo6xi6 e196pkbe0" data-testid="stElementContainer" data-stale="false" width="100%" height="auto" overflow="visible"><div class="st-emotion-cache-8atqhb e1mlolmg0"><div class="stFileUploader st-emotion-cache-0 e16n7gab17" data-testid="stFileUploader" width="589.5"><label data-testid="stWidgetLabel" aria-hidden="true" class="st-emotion-cache-1s2v671 e1gk92lc0"><div data-testid="stMarkdownContainer" class="st-emotion-cache-3qzj0x et2rgd20"><p>上传熊猫图片</p></div></label><section role="presentation" tabindex="0" data-testid="stFileUploaderDropzone" aria-label="上传熊猫图片" aria-disabled="false" class="st-emotion-cache-15nprkh e16n7gab0"><input data-testid="stFileUploaderDropzoneInput" accept="application/streamlit,.jpg,.jpeg,.png" multiple="" type="file" tabindex="-1" style="border: 0px; clip: rect(0px, 0px, 0px, 0px); clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"><div data-testid="stFileUploaderDropzoneInstructions" class="st-emotion-cache-i0nc7r e16n7gab1"><span class="st-emotion-cache-yo0lzo e16n7gab2"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="e1t4gh341 st-emotion-cache-6rlrad ex0cdmw0"><path fill="none" d="M0 0h24v24H0V0z"></path><path d="M19.35 10.04A7.49 7.49 0 0012 4C9.11 4 6.6 5.64 5.35 8.04A5.994 5.994 0 000 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM19 18H6c-2.21 0-4-1.79-4-4 0-2.05 1.53-3.76 3.56-3.97l1.07-.11.5-.95A5.469 5.469 0 0112 6c2.62 0 4.88 1.86 5.39 4.43l.3 1.5 1.53.11A2.98 2.98 0 0122 15c0 1.65-1.35 3-3 3zM8 13h2.55v3h2.9v-3H16l-4-4z"></path></svg></span><div class="st-emotion-cache-kt79cc e16n7gab5"><span class="st-emotion-cache-ycmcfb e16n7gab3">Drag and drop files here</span><span class="st-emotion-cache-1sct1q3 e16n7gab4">Limit 200MB per file • JPG, JPEG, PNG</span></div></div><span class="st-emotion-cache-epvm6 e16n7gab6"><button kind="secondary" data-testid="stBaseButton-secondary" aria-label="" class="st-emotion-cache-jzs692 e8vg11g2">Browse files</button></span></section></div></div></div></div></div><div class="stColumn st-emotion-cache-kmufyr e196pkbe1" data-testid="stColumn"><div direction="column" height="100%" class="stVerticalBlock st-emotion-cache-wfksaw e196pkbe2" data-testid="stVerticalBlock"><div class="stElementContainer element-container st-emotion-cache-1vo6xi6 e196pkbe0" data-testid="stElementContainer" data-stale="false" width="100%" height="auto" overflow="visible"><div class="stHeading" data-testid="stHeading"><div data-testid="stMarkdownContainer" class="st-emotion-cache-3uj0rx et2rgd20"><div data-testid="stHeadingWithActionElements" class="st-emotion-cache-ua1rfn et2rgd22"><h3 id="ad74b6f2">🐼 个体识别数据收集<span data-testid="stHeaderActionElements" class="st-emotion-cache-gi0tri et2rgd23"><a href="http://localhost:8501/#ad74b6f2" class="st-emotion-cache-yinll1 et2rgd21"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></span></h3></div></div></div></div><div class="stElementContainer element-container st-emotion-cache-1vo6xi6 e196pkbe0" data-testid="stElementContainer" data-stale="false" width="100%" height="auto" overflow="visible"><div class="stMarkdown" data-testid="stMarkdown"><div data-testid="stMarkdownContainer" class="st-emotion-cache-3uj0rx et2rgd20"><p>收集同一物种不同个体的图片</p></div></div></div><div class="stElementContainer element-container st-emotion-cache-1vo6xi6 e196pkbe0" data-testid="stElementContainer" data-stale="false" width="100%" height="auto" overflow="visible"><div class="stTextInput st-emotion-cache-79elbk e1o1zy6o0" data-testid="stTextInput"><label data-testid="stWidgetLabel" aria-hidden="true" for="text_input_1" class="st-emotion-cache-1s2v671 e1gk92lc0"><div data-testid="stMarkdownContainer" class="st-emotion-cache-3qzj0x et2rgd20"><p>输入个体名称</p></div></label><div data-baseweb="input" data-testid="stTextInputRootElement" class="st-ay st-ag st-d2 st-cv st-d4 st-d5 st-d6 st-d7 st-d8 st-d9 st-da st-db st-eb st-bg st-dd st-cl st-co st-cm st-cn st-bp st-cc st-br st-bs st-bt st-bu st-de st-df st-dg st-dh st-di st-b1 st-ec st-bw"><div data-baseweb="base-input" class="st-ag st-cv st-ed st-bg st-dd st-bp st-cc st-br st-bs st-bt st-bu st-c1 st-di"><input aria-label="输入个体名称" aria-invalid="false" aria-required="false" autocomplete="" id="text_input_1" inputmode="text" name="" placeholder="例如：平平、安安" type="text" class="st-ay st-dv st-b5 st-b7 st-b6 st-b8 st-b9 st-bb st-ba st-bc st-bi st-cv st-ee st-dr st-d3 st-ef st-dl st-dm st-dn st-do st-bp st-cc st-cd st-d1 st-bt st-bu st-c1 st-eg st-eh" value=""></div></div></div></div></div></div></div></div><div class="stElementContainer element-container st-emotion-cache-1vo6xi6 e196pkbe0" data-testid="stElementContainer" data-stale="false" width="100%" height="auto" overflow="visible"><div class="stHeading" data-testid="stHeading"><div data-testid="stMarkdownContainer" class="st-emotion-cache-3uj0rx et2rgd20"><div data-testid="stHeadingWithActionElements" class="st-emotion-cache-ua1rfn et2rgd22"><h3 id="57cb271f">📊 数据集状态<span data-testid="stHeaderActionElements" class="st-emotion-cache-gi0tri et2rgd23"><a href="http://localhost:8501/#57cb271f" class="st-emotion-cache-yinll1 et2rgd21"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></span></h3></div></div></div></div><div data-testid="stLayoutWrapper" width="100%" height="auto" overflow="visible" class="st-emotion-cache-18kf3ut e196pkbe3"><div direction="row" overflow="visible" height="auto" class="stHorizontalBlock st-emotion-cache-1permvm e196pkbe2" data-testid="stHorizontalBlock" data-test-scroll-behavior="normal"><div class="stColumn st-emotion-cache-kmufyr e196pkbe1" data-testid="stColumn"><div direction="column" height="100%" class="stVerticalBlock st-emotion-cache-wfksaw e196pkbe2" data-testid="stVerticalBlock"><div class="stElementContainer element-container st-emotion-cache-1vo6xi6 e196pkbe0" data-testid="stElementContainer" data-stale="false" width="100%" height="auto" overflow="visible"><div class="stMarkdown" data-testid="stMarkdown"><div data-testid="stMarkdownContainer" class="st-emotion-cache-3uj0rx et2rgd20"><p><strong>物种分类数据集</strong></p></div></div></div><div class="stElementContainer element-container st-emotion-cache-1vo6xi6 e196pkbe0" data-testid="stElementContainer" data-stale="false" width="100%" height="auto" overflow="visible"><div class="stMarkdown" data-testid="stMarkdown"><div data-testid="stMarkdownContainer" class="st-emotion-cache-3uj0rx et2rgd20"><p>暂无数据</p></div></div></div></div></div><div class="stColumn st-emotion-cache-kmufyr e196pkbe1" data-testid="stColumn"><div direction="column" height="100%" class="stVerticalBlock st-emotion-cache-wfksaw e196pkbe2" data-testid="stVerticalBlock"><div class="stElementContainer element-container st-emotion-cache-1vo6xi6 e196pkbe0" data-testid="stElementContainer" data-stale="false" width="100%" height="auto" overflow="visible"><div class="stMarkdown" data-testid="stMarkdown"><div data-testid="stMarkdownContainer" class="st-emotion-cache-3uj0rx et2rgd20"><p><strong>个体识别数据集</strong></p></div></div></div><div class="stElementContainer element-container st-emotion-cache-1vo6xi6 e196pkbe0" data-testid="stElementContainer" data-stale="false" width="100%" height="auto" overflow="visible"><div class="stMarkdown" data-testid="stMarkdown"><div data-testid="stMarkdownContainer" class="st-emotion-cache-3uj0rx et2rgd20"><p>暂无数据</p></div></div></div></div></div></div></div><div class="stElementContainer element-container st-emotion-cache-1vo6xi6 e196pkbe0" data-testid="stElementContainer" data-stale="false" width="100%" height="auto" overflow="visible"><div class="stAlert" data-testid="stAlert"><div role="alert" data-baseweb="notification" data-testid="stAlertContainer" class="stAlertContainer st-bp st-cc st-cd st-bs st-bt st-bu st-ce st-cf st-cg st-cb st-ch st-ci st-cj st-aw st-ax st-ck st-cl st-cm st-cn st-co st-cp st-d0 st-cr st-bg st-cs st-ag st-ct st-av st-au st-cu"><div class="st-cv st-cw"><div data-testid="stAlertContentInfo" class="st-emotion-cache-wmn9kq en1c6do0"><div class="st-emotion-cache-1xmp9w2 e9q2xfh0"><div data-testid="stMarkdownContainer" class="st-emotion-cache-3uj0rx et2rgd20" style="width: 100%;"><p>💡 <strong>数据的重要性</strong>：</p>
+<ul>
+<li><strong>数据数量</strong>：AI需要足够多的例子来学习规律</li>
+<li><strong>数据质量</strong>：清晰、多样的图片能让AI学得更好</li>
+<li><strong>数据多样性</strong>：不同角度、光照的图片让AI更强大</li>
+</ul></div></div></div></div></div></div></div></div></div><div data-baseweb="tab-panel" role="tabpanel" id="tabs-bui2-tabpanel-1" aria-labelledby="tabs-bui2-tab-1" class="st-ai st-bi st-cb st-b3 st-b4 st-b1" hidden=""><div direction="column" height="auto" class="stVerticalBlock st-emotion-cache-tn0cau e196pkbe2" data-testid="stVerticalBlock"><div class="stElementContainer element-container st-emotion-cache-1vo6xi6 e196pkbe0" data-testid="stElementContainer" data-stale="false" width="100%" height="auto" overflow="visible"><div class="stHeading" data-testid="stHeading"><div data-testid="stMarkdownContainer" class="st-emotion-cache-3uj0rx et2rgd20"><div data-testid="stHeadingWithActionElements" class="st-emotion-cache-ua1rfn et2rgd22"><h2 id="ai">🤖 第二步：训练AI模型<span data-testid="stHeaderActionElements" class="st-emotion-cache-gi0tri et2rgd23"><a href="http://localhost:8501/#ai" class="st-emotion-cache-yinll1 et2rgd21"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></span></h2></div></div></div></div><div class="stElementContainer element-container st-emotion-cache-1vo6xi6 e196pkbe0" data-testid="stElementContainer" data-stale="false" width="100%" height="auto" overflow="visible"><div class="stMarkdown" data-testid="stMarkdown"><div data-testid="stMarkdownContainer" class="st-emotion-cache-3uj0rx et2rgd20"><p>现在让我们用收集的数据来训练AI模型！</p></div></div></div><div data-testid="stLayoutWrapper" width="100%" height="auto" overflow="visible" class="st-emotion-cache-18kf3ut e196pkbe3"><div direction="row" overflow="visible" height="auto" class="stHorizontalBlock st-emotion-cache-1permvm e196pkbe2" data-testid="stHorizontalBlock" data-test-scroll-behavior="normal"><div class="stColumn st-emotion-cache-kmufyr e196pkbe1" data-testid="stColumn"><div direction="column" height="100%" class="stVerticalBlock st-emotion-cache-wfksaw e196pkbe2" data-testid="stVerticalBlock"><div class="stElementContainer element-container st-emotion-cache-1vo6xi6 e196pkbe0" data-testid="stElementContainer" data-stale="false" width="100%" height="auto" overflow="visible"><div class="stHeading" data-testid="stHeading"><div data-testid="stMarkdownContainer" class="st-emotion-cache-3uj0rx et2rgd20"><div data-testid="stHeadingWithActionElements" class="st-emotion-cache-ua1rfn et2rgd22"><h3 id="b6a20411">🐯 物种分类模型训练<span data-testid="stHeaderActionElements" class="st-emotion-cache-gi0tri et2rgd23"><a href="http://localhost:8501/#b6a20411" class="st-emotion-cache-yinll1 et2rgd21"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></span></h3></div></div></div></div><div class="stElementContainer element-container st-emotion-cache-1vo6xi6 e196pkbe0" data-testid="stElementContainer" data-stale="false" width="100%" height="auto" overflow="visible"><div class="stAlert" data-testid="stAlert"><div role="alert" data-baseweb="notification" data-testid="stAlertContainer" class="stAlertContainer st-bp st-cc st-cd st-bs st-bt st-bu st-ce st-cx st-cg st-cb st-ch st-ci st-cj st-aw st-ax st-cy st-cl st-cm st-cn st-co st-cp st-d0 st-cr st-bg st-cs st-ag st-ct st-av st-au st-cu"><div class="st-cv st-cw"><div data-testid="stAlertContentWarning" class="st-emotion-cache-wmn9kq en1c6do0"><div class="st-emotion-cache-1xmp9w2 e9q2xfh0"><div data-testid="stMarkdownContainer" class="st-emotion-cache-3uj0rx et2rgd20" style="width: 100%;"><p>需要至少2个物种才能训练分类模型</p></div></div></div></div></div></div></div></div></div><div class="stColumn st-emotion-cache-kmufyr e196pkbe1" data-testid="stColumn"><div direction="column" height="100%" class="stVerticalBlock st-emotion-cache-wfksaw e196pkbe2" data-testid="stVerticalBlock"><div class="stElementContainer element-container st-emotion-cache-1vo6xi6 e196pkbe0" data-testid="stElementContainer" data-stale="false" width="100%" height="auto" overflow="visible"><div class="stHeading" data-testid="stHeading"><div data-testid="stMarkdownContainer" class="st-emotion-cache-3uj0rx et2rgd20"><div data-testid="stHeadingWithActionElements" class="st-emotion-cache-ua1rfn et2rgd22"><h3 id="71acc81a">🐼 个体识别模型训练<span data-testid="stHeaderActionElements" class="st-emotion-cache-gi0tri et2rgd23"><a href="http://localhost:8501/#71acc81a" class="st-emotion-cache-yinll1 et2rgd21"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></span></h3></div></div></div></div><div class="stElementContainer element-container st-emotion-cache-1vo6xi6 e196pkbe0" data-testid="stElementContainer" data-stale="false" width="100%" height="auto" overflow="visible"><div class="stAlert" data-testid="stAlert"><div role="alert" data-baseweb="notification" data-testid="stAlertContainer" class="stAlertContainer st-bp st-cc st-cd st-bs st-bt st-bu st-ce st-cx st-cg st-cb st-ch st-ci st-cj st-aw st-ax st-cy st-cl st-cm st-cn st-co st-cp st-d0 st-cr st-bg st-cs st-ag st-ct st-av st-au st-cu"><div class="st-cv st-cw"><div data-testid="stAlertContentWarning" class="st-emotion-cache-wmn9kq en1c6do0"><div class="st-emotion-cache-1xmp9w2 e9q2xfh0"><div data-testid="stMarkdownContainer" class="st-emotion-cache-3uj0rx et2rgd20" style="width: 100%;"><p>需要至少2个个体才能训练识别模型</p></div></div></div></div></div></div></div></div></div></div></div></div></div><div data-baseweb="tab-panel" role="tabpanel" id="tabs-bui2-tabpanel-2" aria-labelledby="tabs-bui2-tab-2" class="st-ai st-bi st-cb st-b3 st-b4 st-b1" hidden=""><div direction="column" height="auto" class="stVerticalBlock st-emotion-cache-tn0cau e196pkbe2" data-testid="stVerticalBlock"><div class="stElementContainer element-container st-emotion-cache-1vo6xi6 e196pkbe0" data-testid="stElementContainer" data-stale="false" width="100%" height="auto" overflow="visible"><div class="stHeading" data-testid="stHeading"><div data-testid="stMarkdownContainer" class="st-emotion-cache-3uj0rx et2rgd20"><div data-testid="stHeadingWithActionElements" class="st-emotion-cache-ua1rfn et2rgd22"><h2 id="ai">🔍 第三步：测试AI模型<span data-testid="stHeaderActionElements" class="st-emotion-cache-gi0tri et2rgd23"><a href="http://localhost:8501/#ai" class="st-emotion-cache-yinll1 et2rgd21"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></span></h2></div></div></div></div><div class="stElementContainer element-container st-emotion-cache-1vo6xi6 e196pkbe0" data-testid="stElementContainer" data-stale="false" width="100%" height="auto" overflow="visible"><div class="stMarkdown" data-testid="stMarkdown"><div data-testid="stMarkdownContainer" class="st-emotion-cache-3uj0rx et2rgd20"><p>让我们看看训练好的AI模型表现如何！</p></div></div></div><div data-testid="stLayoutWrapper" width="100%" height="auto" overflow="visible" class="st-emotion-cache-18kf3ut e196pkbe3"><div direction="row" overflow="visible" height="auto" class="stHorizontalBlock st-emotion-cache-1permvm e196pkbe2" data-testid="stHorizontalBlock" data-test-scroll-behavior="normal"><div class="stColumn st-emotion-cache-kmufyr e196pkbe1" data-testid="stColumn"><div direction="column" height="100%" class="stVerticalBlock st-emotion-cache-wfksaw e196pkbe2" data-testid="stVerticalBlock"><div class="stElementContainer element-container st-emotion-cache-1vo6xi6 e196pkbe0" data-testid="stElementContainer" data-stale="false" width="100%" height="auto" overflow="visible"><div class="stHeading" data-testid="stHeading"><div data-testid="stMarkdownContainer" class="st-emotion-cache-3uj0rx et2rgd20"><div data-testid="stHeadingWithActionElements" class="st-emotion-cache-ua1rfn et2rgd22"><h3 id="8d245ebb">🐯 物种分类测试<span data-testid="stHeaderActionElements" class="st-emotion-cache-gi0tri et2rgd23"><a href="http://localhost:8501/#8d245ebb" class="st-emotion-cache-yinll1 et2rgd21"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></span></h3></div></div></div></div><div class="stElementContainer element-container st-emotion-cache-1vo6xi6 e196pkbe0" data-testid="stElementContainer" data-stale="false" width="100%" height="auto" overflow="visible"><div class="stAlert" data-testid="stAlert"><div role="alert" data-baseweb="notification" data-testid="stAlertContainer" class="stAlertContainer st-bp st-cc st-cd st-bs st-bt st-bu st-ce st-cx st-cg st-cb st-ch st-ci st-cj st-aw st-ax st-cy st-cl st-cm st-cn st-co st-cp st-d0 st-cr st-bg st-cs st-ag st-ct st-av st-au st-cu"><div class="st-cv st-cw"><div data-testid="stAlertContentWarning" class="st-emotion-cache-wmn9kq en1c6do0"><div class="st-emotion-cache-1xmp9w2 e9q2xfh0"><div data-testid="stMarkdownContainer" class="st-emotion-cache-3uj0rx et2rgd20" style="width: 100%;"><p>请先训练物种分类模型</p></div></div></div></div></div></div></div></div></div><div class="stColumn st-emotion-cache-kmufyr e196pkbe1" data-testid="stColumn"><div direction="column" height="100%" class="stVerticalBlock st-emotion-cache-wfksaw e196pkbe2" data-testid="stVerticalBlock"><div class="stElementContainer element-container st-emotion-cache-1vo6xi6 e196pkbe0" data-testid="stElementContainer" data-stale="false" width="100%" height="auto" overflow="visible"><div class="stHeading" data-testid="stHeading"><div data-testid="stMarkdownContainer" class="st-emotion-cache-3uj0rx et2rgd20"><div data-testid="stHeadingWithActionElements" class="st-emotion-cache-ua1rfn et2rgd22"><h3 id="beb59138">🐼 个体识别测试<span data-testid="stHeaderActionElements" class="st-emotion-cache-gi0tri et2rgd23"><a href="http://localhost:8501/#beb59138" class="st-emotion-cache-yinll1 et2rgd21"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></span></h3></div></div></div></div><div class="stElementContainer element-container st-emotion-cache-1vo6xi6 e196pkbe0" data-testid="stElementContainer" data-stale="false" width="100%" height="auto" overflow="visible"><div class="stAlert" data-testid="stAlert"><div role="alert" data-baseweb="notification" data-testid="stAlertContainer" class="stAlertContainer st-bp st-cc st-cd st-bs st-bt st-bu st-ce st-cx st-cg st-cb st-ch st-ci st-cj st-aw st-ax st-cy st-cl st-cm st-cn st-co st-cp st-d0 st-cr st-bg st-cs st-ag st-ct st-av st-au st-cu"><div class="st-cv st-cw"><div data-testid="stAlertContentWarning" class="st-emotion-cache-wmn9kq en1c6do0"><div class="st-emotion-cache-1xmp9w2 e9q2xfh0"><div data-testid="stMarkdownContainer" class="st-emotion-cache-3uj0rx et2rgd20" style="width: 100%;"><p>请先训练个体识别模型</p></div></div></div></div></div></div></div></div></div></div></div></div></div><div data-baseweb="tab-panel" role="tabpanel" id="tabs-bui2-tabpanel-3" aria-labelledby="tabs-bui2-tab-3" hidden="" class="st-ai st-bi st-cb st-b3 st-b4 st-b1"><div direction="column" height="auto" class="stVerticalBlock st-emotion-cache-tn0cau e196pkbe2" data-testid="stVerticalBlock"><div class="stElementContainer element-container st-emotion-cache-1vo6xi6 e196pkbe0" data-testid="stElementContainer" data-stale="false" width="100%" height="auto" overflow="visible"><div class="stHeading" data-testid="stHeading"><div data-testid="stMarkdownContainer" class="st-emotion-cache-3uj0rx et2rgd20"><div data-testid="stHeadingWithActionElements" class="st-emotion-cache-ua1rfn et2rgd22"><h2 id="8421e67d">📊 学习总结与反思<span data-testid="stHeaderActionElements" class="st-emotion-cache-gi0tri et2rgd23"><a href="http://localhost:8501/#8421e67d" class="st-emotion-cache-yinll1 et2rgd21"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></span></h2></div></div></div></div><div class="stElementContainer element-container st-emotion-cache-1vo6xi6 e196pkbe0" data-testid="stElementContainer" data-stale="false" width="100%" height="auto" overflow="visible"><div class="stHeading" data-testid="stHeading"><div data-testid="stMarkdownContainer" class="st-emotion-cache-3uj0rx et2rgd20"><div data-testid="stHeadingWithActionElements" class="st-emotion-cache-ua1rfn et2rgd22"><h3 id="b8e69e90">🎯 核心概念回顾<span data-testid="stHeaderActionElements" class="st-emotion-cache-gi0tri et2rgd23"><a href="http://localhost:8501/#b8e69e90" class="st-emotion-cache-yinll1 et2rgd21"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></span></h3></div></div></div></div><div data-testid="stLayoutWrapper" width="100%" height="auto" overflow="visible" class="st-emotion-cache-18kf3ut e196pkbe3"><div direction="row" overflow="visible" height="auto" class="stHorizontalBlock st-emotion-cache-1permvm e196pkbe2" data-testid="stHorizontalBlock" data-test-scroll-behavior="normal"><div class="stColumn st-emotion-cache-105waz3 e196pkbe1" data-testid="stColumn"><div direction="column" height="100%" class="stVerticalBlock st-emotion-cache-wfksaw e196pkbe2" data-testid="stVerticalBlock"><div class="stElementContainer element-container st-emotion-cache-1vo6xi6 e196pkbe0" data-testid="stElementContainer" data-stale="false" width="100%" height="auto" overflow="visible"><div class="stAlert" data-testid="stAlert"><div role="alert" data-baseweb="notification" data-testid="stAlertContainer" class="stAlertContainer st-bp st-cc st-cd st-bs st-bt st-bu st-ce st-cf st-cg st-cb st-ch st-ci st-cj st-aw st-ax st-ck st-cl st-cm st-cn st-co st-cp st-d0 st-cr st-bg st-cs st-ag st-ct st-av st-au st-cu"><div class="st-cv st-cw"><div data-testid="stAlertContentInfo" class="st-emotion-cache-wmn9kq en1c6do0"><div class="st-emotion-cache-1xmp9w2 e9q2xfh0"><div data-testid="stMarkdownContainer" class="st-emotion-cache-3uj0rx et2rgd20" style="width: 100%;"><p><strong>🤖 什么是AI学习？</strong></p>
+<ul>
+<li>AI通过例子学习</li>
+<li>需要大量数据</li>
+<li>学习过程需要时间</li>
+</ul></div></div></div></div></div></div></div></div></div><div class="stColumn st-emotion-cache-105waz3 e196pkbe1" data-testid="stColumn"><div direction="column" height="100%" class="stVerticalBlock st-emotion-cache-wfksaw e196pkbe2" data-testid="stVerticalBlock"><div class="stElementContainer element-container st-emotion-cache-1vo6xi6 e196pkbe0" data-testid="stElementContainer" data-stale="false" width="100%" height="auto" overflow="visible"><div class="stAlert" data-testid="stAlert"><div role="alert" data-baseweb="notification" data-testid="stAlertContainer" class="stAlertContainer st-bp st-cc st-cd st-bs st-bt st-bu st-ce st-cf st-cg st-cb st-ch st-ci st-cj st-aw st-ax st-ck st-cl st-cm st-cn st-co st-cp st-d0 st-cr st-bg st-cs st-ag st-ct st-av st-au st-cu"><div class="st-cv st-cw"><div data-testid="stAlertContentInfo" class="st-emotion-cache-wmn9kq en1c6do0"><div class="st-emotion-cache-1xmp9w2 e9q2xfh0"><div data-testid="stMarkdownContainer" class="st-emotion-cache-3uj0rx et2rgd20" style="width: 100%;"><p><strong>📸 数据的重要性</strong></p>
+<ul>
+<li>数据是AI的"食物"</li>
+<li>数据质量影响学习效果</li>
+<li>数据多样性让AI更聪明</li>
+</ul></div></div></div></div></div></div></div></div></div><div class="stColumn st-emotion-cache-105waz3 e196pkbe1" data-testid="stColumn"><div direction="column" height="100%" class="stVerticalBlock st-emotion-cache-wfksaw e196pkbe2" data-testid="stVerticalBlock"><div class="stElementContainer element-container st-emotion-cache-1vo6xi6 e196pkbe0" data-testid="stElementContainer" data-stale="false" width="100%" height="auto" overflow="visible"><div class="stAlert" data-testid="stAlert"><div role="alert" data-baseweb="notification" data-testid="stAlertContainer" class="stAlertContainer st-bp st-cc st-cd st-bs st-bt st-bu st-ce st-cf st-cg st-cb st-ch st-ci st-cj st-aw st-ax st-ck st-cl st-cm st-cn st-co st-cp st-d0 st-cr st-bg st-cs st-ag st-ct st-av st-au st-cu"><div class="st-cv st-cw"><div data-testid="stAlertContentInfo" class="st-emotion-cache-wmn9kq en1c6do0"><div class="st-emotion-cache-1xmp9w2 e9q2xfh0"><div data-testid="stMarkdownContainer" class="st-emotion-cache-3uj0rx et2rgd20" style="width: 100%;"><p><strong>🔍 CNN算法原理</strong></p>
+<ul>
+<li>像人眼一样识别特征</li>
+<li>从简单到复杂层层提取</li>
+<li>最终做出判断</li>
+</ul></div></div></div></div></div></div></div></div></div></div></div><div class="stElementContainer element-container st-emotion-cache-1vo6xi6 e196pkbe0" data-testid="stElementContainer" data-stale="false" width="100%" height="auto" overflow="visible"><div class="stHeading" data-testid="stHeading"><div data-testid="stMarkdownContainer" class="st-emotion-cache-3uj0rx et2rgd20"><div data-testid="stHeadingWithActionElements" class="st-emotion-cache-ua1rfn et2rgd22"><h3 id="3ec6db5d">📝 实验记录<span data-testid="stHeaderActionElements" class="st-emotion-cache-gi0tri et2rgd23"><a href="http://localhost:8501/#3ec6db5d" class="st-emotion-cache-yinll1 et2rgd21"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></span></h3></div></div></div></div><div class="stElementContainer element-container st-emotion-cache-1vo6xi6 e196pkbe0" data-testid="stElementContainer" data-stale="false" width="100%" height="auto" overflow="visible"><div class="stMarkdown" data-testid="stMarkdown"><div data-testid="stMarkdownContainer" class="st-emotion-cache-3uj0rx et2rgd20"><p><strong>数据收集统计:</strong></p></div></div></div><div data-testid="stLayoutWrapper" width="100%" height="auto" overflow="visible" class="st-emotion-cache-18kf3ut e196pkbe3"><div direction="row" overflow="visible" height="auto" class="stHorizontalBlock st-emotion-cache-1permvm e196pkbe2" data-testid="stHorizontalBlock" data-test-scroll-behavior="normal"><div class="stColumn st-emotion-cache-kmufyr e196pkbe1" data-testid="stColumn"><div direction="column" height="100%" class="stVerticalBlock st-emotion-cache-wfksaw e196pkbe2" data-testid="stVerticalBlock"><div class="stElementContainer element-container st-emotion-cache-1vo6xi6 e196pkbe0" data-testid="stElementContainer" data-stale="false" width="100%" height="auto" overflow="visible"><div class="stMarkdown" data-testid="stMarkdown"><div data-testid="stMarkdownContainer" class="st-emotion-cache-3uj0rx et2rgd20"><p>物种类别数: 0</p></div></div></div><div class="stElementContainer element-container st-emotion-cache-1vo6xi6 e196pkbe0" data-testid="stElementContainer" data-stale="false" width="100%" height="auto" overflow="visible"><div class="stMarkdown" data-testid="stMarkdown"><div data-testid="stMarkdownContainer" class="st-emotion-cache-3uj0rx et2rgd20"><p>物种列表: 无</p></div></div></div></div></div><div class="stColumn st-emotion-cache-kmufyr e196pkbe1" data-testid="stColumn"><div direction="column" height="100%" class="stVerticalBlock st-emotion-cache-wfksaw e196pkbe2" data-testid="stVerticalBlock"><div class="stElementContainer element-container st-emotion-cache-1vo6xi6 e196pkbe0" data-testid="stElementContainer" data-stale="false" width="100%" height="auto" overflow="visible"><div class="stMarkdown" data-testid="stMarkdown"><div data-testid="stMarkdownContainer" class="st-emotion-cache-3uj0rx et2rgd20"><p>个体类别数: 0</p></div></div></div><div class="stElementContainer element-container st-emotion-cache-1vo6xi6 e196pkbe0" data-testid="stElementContainer" data-stale="false" width="100%" height="auto" overflow="visible"><div class="stMarkdown" data-testid="stMarkdown"><div data-testid="stMarkdownContainer" class="st-emotion-cache-3uj0rx et2rgd20"><p>个体列表: 无</p></div></div></div></div></div></div></div><div class="stElementContainer element-container st-emotion-cache-1vo6xi6 e196pkbe0" data-testid="stElementContainer" data-stale="false" width="100%" height="auto" overflow="visible"><div class="stHeading" data-testid="stHeading"><div data-testid="stMarkdownContainer" class="st-emotion-cache-3uj0rx et2rgd20"><div data-testid="stHeadingWithActionElements" class="st-emotion-cache-ua1rfn et2rgd22"><h3 id="98826f44">💡 思考问题<span data-testid="stHeaderActionElements" class="st-emotion-cache-gi0tri et2rgd23"><a href="http://localhost:8501/#98826f44" class="st-emotion-cache-yinll1 et2rgd21"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></span></h3></div></div></div></div><div class="stElementContainer element-container st-emotion-cache-1vo6xi6 e196pkbe0" data-testid="stElementContainer" data-stale="false" width="100%" height="auto" overflow="visible"><div class="stMarkdown" data-testid="stMarkdown"><div data-testid="stMarkdownContainer" class="st-emotion-cache-3uj0rx et2rgd20"><ol>
+<li>为什么AI需要很多图片才能学好？</li>
+</ol></div></div></div><div class="stElementContainer element-container st-emotion-cache-1vo6xi6 e196pkbe0" data-testid="stElementContainer" data-stale="false" width="100%" height="auto" overflow="visible"><div class="stMarkdown" data-testid="stMarkdown"><div data-testid="stMarkdownContainer" class="st-emotion-cache-3uj0rx et2rgd20"><ol start="2">
+<li>如果只给AI看模糊的图片，会发生什么？</li>
+</ol></div></div></div><div class="stElementContainer element-container st-emotion-cache-1vo6xi6 e196pkbe0" data-testid="stElementContainer" data-stale="false" width="100%" height="auto" overflow="visible"><div class="stMarkdown" data-testid="stMarkdown"><div data-testid="stMarkdownContainer" class="st-emotion-cache-3uj0rx et2rgd20"><ol start="3">
+<li>为什么个体识别比物种识别更难？</li>
+</ol></div></div></div><div class="stElementContainer element-container st-emotion-cache-1vo6xi6 e196pkbe0" data-testid="stElementContainer" data-stale="false" width="100%" height="auto" overflow="visible"><div class="stMarkdown" data-testid="stMarkdown"><div data-testid="stMarkdownContainer" class="st-emotion-cache-3uj0rx et2rgd20"><ol start="4">
+<li>如何让AI识别更准确？</li>
+</ol></div></div></div><div class="stElementContainer element-container st-emotion-cache-1vo6xi6 e196pkbe0" data-testid="stElementContainer" data-stale="false" width="100%" height="auto" overflow="visible"><div class="stMarkdown" data-testid="stMarkdown"><div data-testid="stMarkdownContainer" class="st-emotion-cache-3uj0rx et2rgd20"><ol start="5">
+<li>数据在AI学习中扮演什么角色？</li>
+</ol></div></div></div><div class="stElementContainer element-container st-emotion-cache-1vo6xi6 e196pkbe0" data-testid="stElementContainer" data-stale="false" width="100%" height="auto" overflow="visible"><div class="stHeading" data-testid="stHeading"><div data-testid="stMarkdownContainer" class="st-emotion-cache-3uj0rx et2rgd20"><div data-testid="stHeadingWithActionElements" class="st-emotion-cache-ua1rfn et2rgd22"><h3 id="7b4cb712">📋 学习报告<span data-testid="stHeaderActionElements" class="st-emotion-cache-gi0tri et2rgd23"><a href="http://localhost:8501/#7b4cb712" class="st-emotion-cache-yinll1 et2rgd21"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></span></h3></div></div></div></div><div class="stElementContainer element-container st-emotion-cache-l4k65k e196pkbe0" data-testid="stElementContainer" data-stale="false" width="100%" height="auto" overflow="auto"><div class="stTextArea st-emotion-cache-1sm2s1z e1r0q00f0" data-testid="stTextArea"><label data-testid="stWidgetLabel" aria-hidden="true" for="text_area_2" class="st-emotion-cache-1s2v671 e1gk92lc0"><div data-testid="stMarkdownContainer" class="st-emotion-cache-3qzj0x et2rgd20"><p>写下你的学习心得和发现：</p></div></label><div data-baseweb="textarea" data-testid="stTextAreaRootElement" class="st-ay st-ag st-d2 st-cv st-d4 st-d5 st-d6 st-d7 st-d8 st-d9 st-da st-db st-eb st-bg st-dd st-cl st-co st-cm st-cn st-de st-df st-dg st-dh st-di st-ej st-ec st-ai"><div data-baseweb="base-input" class="st-ag st-cv st-ed st-bg st-dd st-bp st-cc st-br st-bs st-bt st-bu st-c1 st-di"><textarea aria-label="写下你的学习心得和发现：" aria-invalid="false" aria-required="false" autocomplete="on" id="text_area_2" inputmode="text" name="" placeholder="我学到了...
+我发现...
+我感到惊讶的是..." type="textarea" rows="3" class="st-ay st-dv st-b5 st-b7 st-b6 st-b8 st-b9 st-bb st-ba st-bc st-bi st-cv st-ee st-dr st-d3 st-ef st-ek st-el st-dn st-em st-bp st-cc st-cd st-d1 st-bt st-bu st-c1 st-eg st-eh st-en st-eo st-ep st-eq"></textarea></div></div></div></div><div class="stElementContainer element-container st-emotion-cache-zh2fnc e196pkbe0" data-testid="stElementContainer" data-stale="false" width="fit-content" height="auto" overflow="visible"><div class="stButton st-emotion-cache-8atqhb e1mlolmg0" data-testid="stButton"><button kind="secondary" data-testid="stBaseButton-secondary" aria-label="" class="st-emotion-cache-5qfegl e8vg11g2"><div data-testid="stMarkdownContainer" class="st-emotion-cache-12j140x et2rgd20"><p>生成学习报告</p></div></button></div></div></div></div></div></div><div class="stElementContainer element-container st-emotion-cache-1vo6xi6 e196pkbe0" data-testid="stElementContainer" data-stale="false" width="100%" height="auto" overflow="visible"><div class="stMarkdown" data-testid="stMarkdown"><div data-testid="stMarkdownContainer" class="st-emotion-cache-3uj0rx et2rgd20"><hr></div></div></div><div class="stElementContainer element-container st-emotion-cache-1vo6xi6 e196pkbe0" data-testid="stElementContainer" data-stale="false" width="100%" height="auto" overflow="visible"><div class="stMarkdown" data-testid="stMarkdown"><div data-testid="stMarkdownContainer" class="st-emotion-cache-3uj0rx et2rgd20"><style>
+.footer {
+    text-align: center;
+    color: gray;
+    font-size: 0.8em;
+}
+</style>
+<div class="footer">
+教学提示：这个系统展示了完整的机器学习流程 - 数据收集、模型训练、预测测试。在实际应用中，需要更多数据和更复杂的模型。
+</div></div></div></div></div></div><div data-testid="stAppIframeResizerAnchor" data-iframe-height="true" class="st-emotion-cache-1dumvfu e4man119"></div></section></div></div></div></div><div data-testid="portal" id="portal" class="st-emotion-cache-1q6lfs0 e19n7mk11"></div></div><div class=""></div></div>
+  
+
+</body><div style="position: static;"><template shadowrootmode="open"><style>.qq-browser-trans-origin-dialog {
+  position: absolute;
+  width: 400px;
+  padding: 12px;
+  border-radius: 8px;
+  border: .5px rgba(0, 0, 0, .08);
+  background: #fff;
+  box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, .16);
+  z-index: 2147483647;
+
+  &-close-icon {
+    position: absolute;
+    top: 16px;
+    right: 12px;
+    width: 12px;
+    height: 12px;
+    cursor: pointer;
+  }
+
+  &-title {
+    display: block;
+    height: 16px;
+    width: auto;
+    margin: 2px 0;
+  }
+
+  &-content {
+    position: relative;
+    margin: 12px 0;
+
+    &-text {
+      color: rgba(0, 0, 0, .86);
+      font-family: 'Microsoft YaHei UI';
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 22px;
+      min-height: 32px;
+      max-height: 98px;
+      padding: 5px 0;
+      overflow-y: scroll;
+
+      &::-webkit-scrollbar {
+        width: 3px;
+        background-color: transparent;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background-color: rgba(0, 0, 0, .04);
+        border-radius: 6px;
+      }
+    }
+
+    &-gradient {
+      position: absolute;
+      bottom: -5px;
+      width: calc(100% - 3px);
+      height: 40px;
+      background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0) 0%,
+        #fff 82.22%,
+        #fff 100%
+      );
+    }
+  }
+
+  &-bottom {
+    float: right;
+    display: flex;
+    align-items: flex-end;
+
+    &-text {
+      color: var(--a-1-t, rgba(0, 0, 0, .86));
+      font-family: 'PingFang SC';
+      font-size: 10px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 10px;
+      padding-right: 4px;
+      cursor: pointer;
+    }
+
+    &-copy-icon {
+      width: 16px;
+      height: 16px;
+      margin-left: 16px;
+      cursor: pointer;
+    }
+
+    &-more-icon {
+      width: 10px;
+      height: 10px;
+      cursor: pointer;
+    }
+  }
+}
+
+.qq-browser-trans-dialog {
+  position: absolute;
+  width: 480px;
+  padding: 16px;
+  border-radius: 16px;
+  border: .5px rgba(0, 0, 0, .05);
+  background: #fff;
+  backdrop-filter: blur(80px);
+  box-shadow: 0px 30px 70px 0px #00000026;
+  z-index: 2147483647;
+  box-sizing: border-box !important;
+
+  &-top {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 24px;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+
+  &-close-icon {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    margin-left: 12px;
+  }
+
+  &-title {
+    display: block;
+    height: 16px !important;
+    width: auto;
+  }
+
+  &-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  &-language {
+    padding: 4px;
+    border-radius: 4px;
+    gap: 8px;
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+
+    &:hover {
+      background: #33333308;
+    }
+
+    &-text {
+      color: #242424;
+      font-size: 12px;
+      line-height: 16px;
+    }
+
+    &-arrow {
+      width: 8px;
+      height: 8px;
+      margin-left: 4px;
+      transform: rotate(90deg);
+    }
+  }
+
+  &-active {
+    background: #33333308;
+  }
+
+  &-active &-language-arrow {
+    transform: rotate(-90deg);
+  }
+
+  &-content {
+    background: #33333308;
+    border-radius: 8px;
+    margin-top: 8px;
+    padding: 0 4px;
+    position: relative;
+
+    &-text {
+      color: #242424;
+      font-size: 14px;
+      line-height: 24px;
+      min-height: 74px;
+      max-height: 264px;
+      padding: 12px 8px;
+      overflow-y: scroll;
+      white-space: pre-line;
+      text-align: justify;
+      box-sizing: border-box;
+
+      &::-webkit-scrollbar {
+        width: 4px;
+        background-color: transparent;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background-color: #0000001f;
+        border-radius: 4px;
+      }
+
+      &::-webkit-scrollbar-track {
+        margin: 4px 0;
+      }
+    }
+
+    &-gradient {
+      position: absolute;
+      bottom: 48px;
+      left: 0;
+      width: calc(100% - 12px);
+      height: 40px;
+      background: linear-gradient(
+        0deg,
+        #f9f9f9 16.25%,
+        rgba(249, 249, 249, 0) 90%
+      );
+    }
+  }
+
+  &-bottom {
+    padding: 12px;
+    justify-content: space-between;
+    user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+
+  &-askmore {
+    color: var(--a-1-t, rgba(0, 0, 0, .86));
+    font-size: 12px;
+    line-height: 12px;
+    height: 12px;
+    overflow: visible;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+
+    &—arrow {
+      width: 12px;
+      height: 12px;
+      margin-left: 4px;
+    }
+  }
+
+  &-dropdown {
+    position: absolute;
+    top: 44px;
+    right: 48px;
+  }
+
+  &-mask {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+  }
+}
+
+.qq-browser-dialog-mask {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: transparent;
+  user-select: none;
+  -webkit-user-select: none;
+  z-index: 2147483647;
+}
+</style><style>.activityButtonContainer .primary {
+  display: none;
+}
+
+:root {
+  --qq-browser-primary-color: rgba(32, 90, 239, 1);
+  --qq-browser-secondary-color: rgba(32, 90, 239, .08);
+  --qq-browser-text-color: rgba(0, 0, 0, .86);
+  --qq-browser-secondary-text-color: rgba(0, 0, 0, 1);
+  --qq-browser-background-color: rgba(255, 255, 255, 1);
+  --qq-browser-border-color: rgba(0, 0, 0, .08);
+  --qq-browser-shadow-color: rgba(0, 0, 0, .1);
+  --qq-browser-secondary-shadow-color: rgba(0, 0, 0, .16);
+  --qq-browser-hover-color: rgba(3, 23, 77, .07);
+  --qq-browser-dropdown-color: rgba(246, 247, 250, 1);
+  --qq-browser-tooltip-color: rgba(0, 0, 0, .44);
+}
+
+body.translate-hide {
+  display: none !important;
+}
+
+:root {
+  --qq-browser-pdf: url('/img/pdf.png');
+  --qq-browser-insertBlank: url('/img/insertBlank.png');
+  --qq-browser-insertPic: url('/img/insertPic.png');
+  --qq-browser-insertPdf: url('/img/insertPdf.png');
+  --qq-browser-addPage: url('/img/addPage.png');
+  --qq-browser-arrow: url('/img/arrow.png');
+  --qq-browser-selected: url('/img/selected.png');
+  --qq-browser-closeIcon: url('/img/closeIcon.png');
+  --qq-browser-loadingSuccess: url('/img/loadingSuccess.png');
+  --qq-browser-transformError: url('/img/transformError.png');
+}
+
+.qq-browser-trans-origin-dialog {
+  position: absolute;
+  width: 400px;
+  padding: 12px;
+  border-radius: 8px;
+  border: .5px rgba(0, 0, 0, .08);
+  background: #fff;
+  box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, .16);
+  z-index: 2147483647;
+}
+
+.qq-browser-trans-origin-dialog-close-icon {
+  position: absolute;
+  top: 16px;
+  right: 12px;
+  width: 12px;
+  height: 12px;
+  cursor: pointer;
+}
+
+.qq-browser-trans-origin-dialog-title {
+  display: block;
+  height: 16px;
+  width: auto;
+  margin: 2px 0;
+}
+
+.qq-browser-trans-origin-dialog-content {
+  position: relative;
+  margin: 12px 0;
+}
+
+.qq-browser-trans-origin-dialog-content-text {
+  color: rgba(0, 0, 0, .86);
+  font-family: 'Microsoft YaHei UI';
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  min-height: 32px;
+  max-height: 98px;
+  padding: 5px 0;
+  overflow-y: scroll;
+}
+
+.qq-browser-trans-origin-dialog-content-text::-webkit-scrollbar {
+  width: 3px;
+  background-color: transparent;
+}
+
+.qq-browser-trans-origin-dialog-content-text::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, .04);
+  border-radius: 6px;
+}
+
+.qq-browser-trans-origin-dialog-content-gradient {
+  position: absolute;
+  bottom: -5px;
+  width: calc(100% - 3px);
+  height: 40px;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 0%,
+    #fff 82.22%,
+    #fff 100%
+  );
+}
+
+.qq-browser-trans-origin-dialog-bottom {
+  float: right;
+  display: flex;
+  align-items: flex-end;
+}
+
+.qq-browser-trans-origin-dialog-bottom-text {
+  color: var(--a-1-t, rgba(0, 0, 0, .86));
+  font-family: 'PingFang SC';
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 10px;
+  padding-right: 4px;
+  cursor: pointer;
+}
+
+.qq-browser-trans-origin-dialog-bottom-copy-icon {
+  width: 16px;
+  height: 16px;
+  margin-left: 16px;
+  cursor: pointer;
+}
+
+.qq-browser-trans-origin-dialog-bottom-more-icon {
+  width: 10px;
+  height: 10px;
+  cursor: pointer;
+}
+
+.qq-browser-trans-dialog {
+  position: absolute;
+  width: 480px;
+  padding: 16px;
+  border-radius: 16px;
+  border: .5px rgba(0, 0, 0, .05);
+  background: #fff;
+  backdrop-filter: blur(80px);
+  box-shadow: 0px 30px 70px 0px rgba(0, 0, 0, .1490196078);
+  z-index: 2147483647;
+  box-sizing: border-box !important;
+}
+
+.qq-browser-trans-dialog-top {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 24px;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.qq-browser-trans-dialog-close-icon {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  margin-left: 12px;
+}
+
+.qq-browser-trans-dialog-title {
+  display: block;
+  height: 16px !important;
+  width: auto;
+}
+
+.qq-browser-trans-dialog-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.qq-browser-trans-dialog-language {
+  padding: 4px;
+  border-radius: 4px;
+  gap: 8px;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.qq-browser-trans-dialog-language:hover {
+  background: rgba(51, 51, 51, .031372549);
+}
+
+.qq-browser-trans-dialog-language-text {
+  color: #242424;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.qq-browser-trans-dialog-language-arrow {
+  width: 8px;
+  height: 8px;
+  margin-left: 4px;
+  transform: rotate(90deg);
+}
+
+.qq-browser-trans-dialog-active {
+  background: rgba(51, 51, 51, .031372549);
+}
+
+.qq-browser-trans-dialog-active .qq-browser-trans-dialog-language-arrow {
+  transform: rotate(-90deg);
+}
+
+.qq-browser-trans-dialog-content {
+  background: rgba(51, 51, 51, .031372549);
+  border-radius: 8px;
+  margin-top: 8px;
+  padding: 0 4px;
+  position: relative;
+}
+
+.qq-browser-trans-dialog-content-text {
+  color: #242424;
+  font-size: 14px;
+  line-height: 24px;
+  min-height: 74px;
+  max-height: 264px;
+  padding: 12px 8px;
+  overflow-y: scroll;
+  white-space: pre-line;
+  text-align: justify;
+  box-sizing: border-box;
+}
+
+.qq-browser-trans-dialog-content-text::-webkit-scrollbar {
+  width: 4px;
+  background-color: transparent;
+}
+
+.qq-browser-trans-dialog-content-text::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, .1215686275);
+  border-radius: 4px;
+}
+
+.qq-browser-trans-dialog-content-text::-webkit-scrollbar-track {
+  margin: 4px 0;
+}
+
+.qq-browser-trans-dialog-content-gradient {
+  position: absolute;
+  bottom: 48px;
+  left: 0;
+  width: calc(100% - 12px);
+  height: 40px;
+  background: linear-gradient(0deg, #f9f9f9 16.25%, rgba(249, 249, 249, 0) 90%);
+}
+
+.qq-browser-trans-dialog-bottom {
+  padding: 12px;
+  justify-content: space-between;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.qq-browser-trans-dialog-askmore {
+  color: var(--a-1-t, rgba(0, 0, 0, .86));
+  font-size: 12px;
+  line-height: 12px;
+  height: 12px;
+  overflow: visible;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+}
+
+.qq-browser-trans-dialog-askmore—arrow {
+  width: 12px;
+  height: 12px;
+  margin-left: 4px;
+}
+
+.qq-browser-trans-dialog-dropdown {
+  position: absolute;
+  top: 44px;
+  right: 48px;
+}
+
+.qq-browser-trans-dialog-mask {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.qq-browser-dialog-mask {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: transparent;
+  user-select: none;
+  -webkit-user-select: none;
+  z-index: 2147483647;
+}
+
+.qq-browser-popup-wrapper {
+  position: fixed;
+  padding: 12px;
+  top: 12px;
+  right: 50px;
+  border-radius: 8px;
+  border: .5px solid rgba(0, 0, 0, .1);
+  background: #fff;
+  box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, .16);
+  z-index: 2147483647;
+}
+
+.qq-browser-popup-wrapper .qq-browser-popup-close-icon {
+  width: 12px;
+  height: 12px;
+  cursor: pointer;
+}
+
+.qq-browser-popup-wrapper .qq-browser-popup-title {
+  height: 20px;
+  width: 376px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.qq-browser-popup-wrapper .qq-browser-popup-title .qq-browser-title {
+  color: rgba(0, 0, 0, .86);
+  font-family: 'Microsoft YaHei UI';
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px;
+}
+
+.qq-browser-popup-wrapper .qq-browser-popup-content {
+  margin-top: 12px;
+  height: 32px;
+  width: 376px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.qq-browser-popup-wrapper
+.qq-browser-popup-content
+.qq-browser-autoTranslateSetting {
+  width: 120px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.qq-browser-popup-wrapper
+.qq-browser-popup-content
+.qq-browser-autoTranslateSetting
+.qq-browser-name {
+  color: #242424;
+  font: 400 12px 'Microsoft YaHei UI';
+  margin-left: 4px;
+  margin-bottom: 0;
+}
+
+.qq-browser-popup-wrapper .qq-browser-popup-content .qq-browser-button-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.qq-browser-popup-wrapper
+.qq-browser-popup-content
+.qq-browser-button-wrapper
+.qq-browser-compare {
+  display: flex;
+  height: 32px;
+  width: 118px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  border: 1px solid #b3b3b3;
+  background: #fff;
+  color: #242424;
+  font-family: 'Microsoft YaHei UI';
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  margin-right: 8px;
+  cursor: pointer;
+}
+
+.qq-browser-popup-wrapper
+.qq-browser-popup-content
+.qq-browser-button-wrapper
+.qq-browser-recover {
+  display: flex;
+  height: 32px;
+  width: 118px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  background: #005cf8;
+  color: #fff;
+  font-family: 'Microsoft YaHei UI';
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.qq-browser-popup-wrapper .qq-browser-popup-tips {
+  position: fixed;
+  z-index: 2147483647;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: inline-flex;
+  padding: 8px 12px;
+  align-items: center;
+  border-radius: 8px;
+  border: .5px solid var(--qq-browser-border-color);
+  background: #242424;
+  box-shadow: 0px 8px 20px 0px var(--qq-browser-shadow-color);
+  width: 180px;
+}
+
+.qq-browser-popup-wrapper .qq-browser-popup-tips .qq-browser-text {
+  margin-left: 8px;
+  display: box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  color: #fff;
+  text-overflow: ellipsis;
+  font: 400 14px/16px 'Microsoft YaHei UI';
+  font-style: normal;
+}
+
+.qb-trans-toast-open {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 140px;
+  height: 40px;
+  z-index: 2147483647;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  border: .5px solid rgba(0, 0, 0, .08);
+  background: var(--a-1, #242424);
+  box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, .1);
+}
+
+.qb-trans-toast-common {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0 16px;
+  height: 40px;
+  z-index: 2147483647;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  border: .5px solid rgba(0, 0, 0, .08);
+  background: var(--a-1, #242424);
+  box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, .1);
+}
+
+.qb-trans-toast-copy {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 112px;
+  height: 40px;
+  z-index: 2147483647;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  border: .5px solid rgba(0, 0, 0, .08);
+  background: var(--a-1, #242424);
+  box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, .1);
+}
+
+.qb-trans-toast-copy-icon {
+  width: 16px;
+  height: 16px;
+  background-image: url('https://cdn.nfa.qq.com/bigfiles_prod/17273088/gmaster/26vwywd91vr4/aio_dock_treasure_website_history%20%281%29.png');
+  background-size: cover;
+  margin-right: 8px;
+}
+
+.qb-trans-toast-text {
+  color: var(--a-1-d, #fff);
+  font-family: 'Microsoft YaHei UI';
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+}
+
+:root {
+  --qq-browser-primary-color: rgba(32, 90, 239, 1);
+  --qq-browser-secondary-color: rgba(32, 90, 239, .08);
+  --qq-browser-text-color: rgba(0, 0, 0, .86);
+  --qq-browser-secondary-text-color: rgba(0, 0, 0, 1);
+  --qq-browser-background-color: rgba(255, 255, 255, 1);
+  --qq-browser-border-color: rgba(0, 0, 0, .08);
+  --qq-browser-shadow-color: rgba(0, 0, 0, .1);
+  --qq-browser-secondary-shadow-color: rgba(0, 0, 0, .16);
+  --qq-browser-hover-color: rgba(3, 23, 77, .07);
+  --qq-browser-dropdown-color: rgba(246, 247, 250, 1);
+  --qq-browser-tooltip-color: rgba(0, 0, 0, .44);
+}
+
+.qq-browser-trans-dropdown {
+  border: 1px solid rgba(255, 255, 255, .0784313725);
+  box-shadow: 0px 8px 40px 0px rgba(0, 0, 0, .2509803922);
+  width: 160px;
+  max-height: 264px;
+  overflow-y: scroll;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  background-color: #fff;
+  border-radius: 8px;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.qq-browser-trans-dropdown::-webkit-scrollbar {
+  width: 4px;
+  background-color: transparent;
+}
+
+.qq-browser-trans-dropdown::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, .1215686275);
+  border-radius: 4px;
+}
+
+.qq-browser-trans-dropdown::-webkit-scrollbar-track {
+  margin: 8px 0;
+}
+
+.qq-browser-trans-dropdown-item {
+  cursor: pointer;
+  display: flex;
+  padding: 8px 4px 8px 8px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 4px;
+}
+
+.qq-browser-trans-dropdown-item:hover {
+  background-color: #f6f6f6;
+}
+
+.qq-browser-trans-dropdown-text {
+  color: rgba(0, 0, 0, .8588235294);
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.qq-browser-trans-dropdown-selected .qq-browser-trans-dropdown-text {
+  color: #242424;
+  font-weight: 600;
+}
+
+.qq-browser-trans-dropdown-img {
+  width: 16px;
+  height: 16px;
+}
+
+.qb-trans-loading-block {
+  padding: 12px;
+}
+
+.qb-trans-loading-block-first {
+  height: 12px;
+  border-radius: 4px;
+  background: rgba(51, 51, 51, .031372549);
+}
+
+.qb-trans-loading-block-second {
+  height: 12px;
+  border-radius: 4px;
+  width: 30%;
+  margin-top: 8px;
+  background: rgba(51, 51, 51, .031372549);
+}
+
+.qq-browser-trans-dropdown-group-title {
+  padding: 8px 8px 4px 8px;
+  color: #999;
+  font-size: 12px;
+  line-height: 16px;
+  cursor: default;
+  user-select: none;
+  -webkit-user-select: none;
+}
+</style><div></div></template></div></html>
