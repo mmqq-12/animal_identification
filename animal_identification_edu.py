@@ -1,3 +1,39 @@
+import subprocess
+import sys
+
+def install_required_packages():
+    required_packages = [
+        'tensorflow==2.13.0',
+        'protobuf==3.20.3', 
+        'Pillow==10.0.0',
+        'numpy==1.24.3',
+        'opencv-python-headless==4.8.1',
+        'matplotlib==3.7.2',
+        'scikit-learn==1.3.0', 
+        'pandas==2.0.3'
+    ]
+    
+    for package in required_packages:
+        try:
+            subprocess.check_call([sys.executable, "-m", "pip", "install", package])
+        except subprocess.CalledProcessError:
+            print(f"安装 {package} 失败，使用模拟模式")
+            return False
+    return True
+
+# 尝试安装包，如果失败则使用模拟模式
+if not install_required_packages():
+    print("使用模拟模式运行")
+    # 这里可以设置一个标志，让代码运行模拟版本
+
+# 然后继续导入
+try:
+    import tensorflow as tf
+    TENSORFLOW_AVAILABLE = True
+except ImportError:
+    TENSORFLOW_AVAILABLE = False
+    print("TensorFlow 不可用，使用模拟模式")
+
 import streamlit as st
 import tensorflow as tf
 from tensorflow import keras
@@ -436,3 +472,4 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
+
